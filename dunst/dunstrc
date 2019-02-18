@@ -1,0 +1,50 @@
+[global]
+  font                 = Pragmata Pro
+  allow_markup         = yes
+  format               = "<b>%s</b>\n%b\n<small>%a</small>"
+  sort                 = yes
+  indicate_hidden      = yes
+  alignment            = left
+  bounce_freq          = 0
+  show_age_threshold   = 60
+  word_wrap            = yes
+  ignore_newline       = no
+  icon_position        = left
+  max_icon_size        = 256
+  geometry             = "800x20-10+60"
+  transparency         = 0
+  idle_threshold       = 999
+  monitor              = 0
+  follow               = mouse
+  line_height          = 0
+  separator_height     = 2
+  padding              = 16
+  horizontal_padding   = 16
+  separator_color      = auto
+  startup_notification = false
+  dmenu                = /usr/bin/dmenu -p dunst:
+  browser              = /usr/bin/firefox -new-tab
+
+[frame]
+  width = 2
+  color = "#93a1a1"
+
+[shortcuts]
+  close     = ctrl+space
+  close_all = ctrl+shift+space
+  history   = ctrl+grave
+  context   = ctrl+shift+period
+
+[urgency_low]
+  background = "#073642"
+  foreground = "#657b83"
+  timeout    = 5
+
+[urgency_normal]
+  background = "#586e75"
+  foreground = "#93a1a1"
+  timeout    = 5
+
+[urgency_critical]
+  background = "#dc322f"
+  foreground = "#eee8d5"

@@ -1,0 +1,57 @@
+conky.config = {
+	alignment              = 'top_right',
+	background             = true,
+	color2                 = '41595D',
+	cpu_avg_samples        = 2,
+	default_color          = '5495A0',
+	double_buffer          = true,
+	font                   = 'Pragmata Pro:size=8',
+	draw_shades            = false,
+    short_units            = true,
+	gap_x                  = 25,
+	gap_y                  = 5,
+	minimum_width          = 400,
+	no_buffers             = true,
+	own_window             = true,
+	own_window_type        = 'override',
+	own_window_transparent = true,
+	update_interval        = 1.0,
+	use_xft                = true,
+}
+conky.text = [[
+${voffset 50}$color2${font Pragmata Pro:size=16}${time %A}$font\
+${voffset -8}$alignr$color${color #bbb}${font Pragmata Pro:bold:size=42}${time %e}$font
+$color${voffset -30}$color${font Pragmata Pro:bold:size=18}${time %b}$font\
+${voffset -3} ${color}${font Pragmata Pro:bold:size=20}${time %Y}$font$color2$hr
+${voffset 10}$color2$hr
+${voffset 4}$alignc$color${font Pragmata Pro:size=16}${time %R:%S %Z}$font
+$color2${hr}${goto 10}
+
+#$color2$hr
+${voffset 10}${goto 40}${color}CPU${font Pragmata Pro:bold:size=8}$alignr$cpu%
+${voffset 5}${goto 40}$font$color2${top name 1}$alignr$color${top cpu 1}%
+${goto 40}$color2${top name 2}$alignr$color${top cpu 2}%
+${goto 40}$color2${top name 3}$alignr$color${top cpu 3}%
+${goto 40}$color2${top name 4}$alignr$color${top cpu 4}%
+# ${goto 40}$color2${top name 5}$alignr$color${top cpu 5}%
+#$color2$hr
+${voffset 10}${goto 40}${color}RAM${font Pragmata Pro:bold:size=8}$alignr$mem$font
+${goto 40}${voffset 5}$color2${top_mem name 1}$alignr$color${top_mem mem_res 1}
+${goto 40}$color2${top_mem name 2}$alignr$color${top_mem mem_res 2}
+${goto 40}$color2${top_mem name 3}$alignr$color${top_mem mem_res 3}
+${goto 40}$color2${top_mem name 4}$alignr$color${top_mem mem_res 4}
+# ${goto 40}$color2${top_mem name 5}$alignr$color${top_mem mem_res 5}
+${voffset 10}$color2$hr
+${voffset 10}${goto 40}${color2}Download speed :${goto 120}${color}$alignr${downspeed wlp59s0}
+#${downspeedgraph wlp59s0 20,}
+${voffset 10}${goto 40}${color2}Upload speed :${goto 120}${color}$alignr${upspeed wlp59s0}
+$hr
+
+${goto 40}#${color1}${downspeedgraph wlp59s0 20,120 668ABF 383C4A}
+${goto 40}${color2}Total Downloaded: ${color}${alignr}${totaldown wlp59s0}
+
+${goto 40}${color2}Total Uploaded: ${color}${alignr}${totalup wlp59s0}
+
+$hr
+$color2$hr
+]]
