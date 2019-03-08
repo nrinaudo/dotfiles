@@ -3,8 +3,6 @@
 [user]
 	name = Nicolas Rinaudo
 	email = nicolas.rinaudo@besedo.com
-[credential]
-	helper = osxkeychain
 [core]
 	autocrlf = input
 [format]
